@@ -10,7 +10,7 @@ module.exports = (app) => {
   router.get('/findAllOnline', auth.validateToken, users.findAllOnline);
   router.get('/findUser/:id', auth.validateToken, users.findOne);
   router.put('/update/:id',auth.validateToken, users.update);
-  router.put('/delete/:id',auth.validateToken ,users.delete);
+  router.delete('/delete/:id',auth.validateToken ,users.delete);
 
   app.use('/api/users', router);
 };
